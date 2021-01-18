@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+.line_icon {
+  display: -ms-grid;
+  display: grid;
+  height: 200px;
+  width: 200px;
+  bottom: 50;
+  right: 20;
+  position: fixed;
+  z-index: 9999;
+  background-size: cover;
+}
+
+#GSS_demo {
+  background-image: url(../imgs/bg3.jpg);
+  background-color: rgba(122, 39, 0, 0.774);
+  background-size: auto 100%;
+  background-position: center;
+}
+
+#GSS_demo .inbox {
+  max-width: 90%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  font-family: Noto San CJK TC;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,48 @@
+#GSS_demo .title_box {
+  color: white;
+  font-size: 2rem;
+  padding-top: 40px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#GSS_demo .title_box .user {
+  padding-top: 20px;
+  color: white;
+  text-align: right;
+  font-size: 30px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+#GSS_demo .title_box h1 {
+  padding-bottom: 0;
+}
+
+#GSS_demo .title_box h1 img {
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#GSS_demo .title_box h2 {
+  margin-top: -25px;
+}
+
+#GSS_demo .title_box h2 img {
+  height: 90px;
+  display: block;
+  margin: 0 auto;
+}
+
+#GSS_demo .title_box .title {
+  margin-top: -35px;
+}
+
+#GSS_demo .title_box .title img {
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=title_box.css.map */

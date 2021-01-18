@@ -1,0 +1,48 @@
+<link rel="stylesheet" type="text/css" href="./css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="./css/css/nav_box.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="./css/css/title_box.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="./css/css/content_box.css" media="screen" />
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="GSS_demo" class="">
+  <div class="inbox">
+    <div class="title_box">
+      <h1>Demo</h1>
+      <h1>Name List</h1>
+    </div>
+
+    <div class="content_box">
+      <ul>
+        <table class="table table bordered table-striped" id="testTable">
+          <tbody id="demo">
+          </tbody>
+        </table>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.onload = function what() {
+    $.getJSON("https://spreadsheets.google.com/feeds/list/1LGaxNlABKip_st1rIDZNwU2VsO_mhdALMgevfwxZMWk/1/public/values?alt=json", function (data) {
+
+      var sheetData = data.feed.entry;
+
+      var i;
+      for (i = 0; i < sheetData.length; i++) {
+
+        var item = data.feed.entry[i]['gsx$name']['$t'];
+        var image = data.feed.entry[i]['gsx$image']['$t'];
+        var tel = data.feed.entry[i]['gsx$tel']['$t'];
+        var school = data.feed.entry[i]['gsx$school']['$t'];
+        
+        if (document.getElementById("demo") != null) {
+          document.getElementById('demo').innerHTML += ('<li>' + '<div class="d_row">' + '<div class="d_col1">' + '<div class="folded_image">' + '<a href="' + image + '" class="bg_center_image" style="background-image: url(' + image + ')">' + '</a>' + '<div class="c1">點 圖 觀 賞</div>' + '<div class="c2"></div>' + '<div class="c3"></div>' + '<div class="c4"></div>' + '</div>' + '</div>' + '<div class="d_col2">' + '<div class="title_text">' + '<div class="title colorY">' + item + '</div>' + '<hr>' + '<div class="text colorGy_l"> '+ school + '</div></div>' + '<div class="action">' + '</div>' + '</div>' + '</div>' + '</li>');
+        }
+      }
+    });
+  }
+
+</script>
